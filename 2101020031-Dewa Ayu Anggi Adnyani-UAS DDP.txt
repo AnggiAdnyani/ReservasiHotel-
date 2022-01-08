@@ -1,0 +1,241 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+    
+    char resepsionis[30], guest [30], alamat [50];
+    int kamar, no_kamar, harga_kamar, bed;
+    int total, lama, um, kurang;
+    float diskon;
+    string jwb, id_guest, id_resepsionis, jenkel, hp, checkin, checkout, fixkam;
+        const int promo = 100000;
+    int array [3] = {200000, 300000, 400000};
+    
+    awal:
+    cout<<endl;
+    cout<<"\t\t‖=============================================================‖" <<endl;
+    cout<<"\t\t‖                Wellcome to Hotel Takt Distiny               ‖" <<endl;
+    cout<<"\t\t‖              Jl. Tokyo Manji, No 69 telp 081234567890       ‖" <<endl;
+    cout<<"\t\t‖                 Kab. Gianyar, Kec. Gianyar, Bali            ‖" <<endl;
+    cout<<"\t\t‖=============================================================‖" <<endl;
+    
+    
+    cout<<"\n\t\t                 Silahkan Isi Form Berikut ini               " <<endl;
+    cout<<"\t\t ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ " <<endl;
+    cout<<"\t\t ⇒ Nama Resepsionis    :    "; cin>>resepsionis;
+    cout<<"\t\t ⇒ ID Repsesionis      :    "; cin>>id_resepsionis;
+    cout<<"\t\t ⇒ Nama Guest          :    "; cin>>guest;
+    cout<<"\t\t ⇒ ID Guest            :    "; cin>>id_guest;
+    cout<<"\t\t ⇒ Jenis Kelamin       :    "; cin>>jenkel;
+    cout<<"\t\t ⇒ No Handphone        :    "; cin>>hp;
+    cout<<"\t\t ⇒ Alamat              :    "; cin>>alamat;
+    cout<<"\t\t ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ " <<endl<<endl;
+    
+    
+    cout<<"\t\t ==============================================================" <<endl;
+    cout<<"\t\t ==                ~~~~~Promo Tahun Baru~~~~~                ==" <<endl;
+    cout<<"\t\t ==  Tipe Kamar Standart with Single, Twin, and Double Bed   ==" <<endl;
+    cout<<"\t\t ==                 Harga promo RP. 100.000                  ==" <<endl;
+    cout<<"\t\t ==============================================================" <<endl<<endl;
+    
+    cout<<"\t\t Tipe Kamar Yang Anda Inginkan : "                               <<endl;
+    cout<<"\t\t ====================================================== "        <<endl;
+    cout<<"\t\t 1. Standart"<<endl;
+    cout<<"\t\t 2. Superior"<<endl;
+    cout<<"\t\t 3. Deluxe"<<endl;
+    cout<<"\t\t 4. Suite"<<endl;
+    cout<<"\t\t 5. Presidential"<<endl;
+    cout<<"\t\t ======================================================"         <<endl;
+    cout<<"\t\t Masukan Nomor Pilihan : "; cin>>kamar;
+    
+    cout<<"\t\t Tipe Bed Yang Anda Inginkan"<<endl;
+    cout<<"\t\t ====================================================== "        <<endl;
+    cout<<"\t\t 1. Single Bed "<<endl;
+    cout<<"\t\t 2. Twin Bed"<<endl;
+    cout<<"\t\t 3. Double Bed "<<endl;
+    cout<<"\t\t ====================================================== "        <<endl;
+    cout<<"\t\t Masukan Nomor Pilihan : "; cin>>bed;
+    cout<<endl;
+    
+    if(kamar==1 && bed==1)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Standart with Single Bed";
+        fixkam = "Standart with Single Bed";
+        harga_kamar = promo;
+    }
+    else if(kamar==1 && bed==2)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Standart with Twin Bed";
+        fixkam = "Standart with Twin Bed";
+        harga_kamar = promo;
+    }
+    else if(kamar==1 && bed==3)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Standart with Double Bed";
+        fixkam = "Standart with Double Bed";
+        harga_kamar = promo;
+    }
+    else if(kamar==2 && bed==1)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Superior with Single Bed";
+        fixkam = "Superior Dengan Single Bed";
+        harga_kamar = array[0];
+    }
+    else if(kamar==2 && bed==2)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Superior with Twin Bed";
+        fixkam = "Superior Dengan Twin Bed";
+        harga_kamar = array [1];
+    }
+    else if (kamar==2 && bed==3)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Superior with Double Bed";
+        fixkam = "Superior Dengan Double Bed";
+        harga_kamar = array [2];
+    }
+    else if (kamar==3 && bed==1)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Deluxe with Single Bed";
+        fixkam = "Deluxe Dengan Single Bed";
+        harga_kamar = 410000;
+    }
+    else if (kamar==3 && bed==2)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Deluxe with Twin Bed";
+        fixkam = "Deluxe Dengan Twin Bed";
+        harga_kamar = 4300000;
+    }
+    else if (kamar==3 && bed==3)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Deluxe with Double Bed";
+        fixkam = "Deluxe Dengan Double Bed";
+        harga_kamar = 4500000;
+    }
+    else if (kamar==4 && bed==1)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Suite with Single Bed";
+        fixkam = "Suite Dengan Single Bed";
+        harga_kamar = 500000;
+    }
+    else if (kamar==4 && bed==2)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Suite with Twin Bed";
+        fixkam = "Suite Dengan Twin Bed";
+        harga_kamar = 550000;
+    }
+    else if (kamar==4 && bed==3)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Suite with Double Bed";
+        fixkam = "Suite Dengan Double Bed";
+        harga_kamar = 600000;
+    }
+    else if (kamar==5 && bed==1)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Presidential with Single Bed";
+        fixkam = "Presidential Dengan Single Bed";
+        harga_kamar = 1000000;
+    }
+    else if (kamar==5 && bed==2)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Presidential with Twin Bed";
+        fixkam = "Presidential Dengan Twin Bed";
+        harga_kamar = 1300000;
+    }
+    else if (kamar==5 && bed==3)
+    {
+        cout<<"\t\t Anda Memilih Kamar Tipe Presidential with Double Bed";
+        fixkam = "presidential Dengan Double Bed";
+        harga_kamar = 1500000;
+    }
+    
+    else
+    {
+        cout<<"\t\t Maaf Pilihan Anda Tidak Tersedia";
+        cout<<"\t\t Untuk Keamanan Silahkan Isi Data Dari Awal"<<endl;
+        cout<<"\t\t Silahkan ketik [Y] untuk memulai lagi"; cin>>jwb;
+            do {
+                goto awal;
+            } while (jwb=="Y"  ||  jwb=="y");
+    }
+    cout<<endl<<endl;
+    cout<<"\t\t Silahkan Mengisi Form Berikut"<<endl;
+    cout<<"\t\t ====================================================== "<<endl;
+    cout<<"\t\t Pilih No. Kamar [1-100]     : "; cin>>no_kamar;
+    cout<<endl;
+    
+    cout<<"\t\t Menginap lebih dari 5 Hari diskon 2% perhari, lebih dari 10 hari diskon 5% perhari"<<endl;
+    cout<<"\t\t Lama Menginap               : "; cin>>lama;
+    if (lama>=10)
+        {
+            diskon=0.5;
+        }
+    else if (lama>=5)
+        {
+            diskon=0.2;
+        }
+    else
+        {
+            diskon=0;
+        }
+    
+    
+    cout<<"\t\t Tanggal Check In [DDMMYY]   : "; cin>>checkin;
+    cout<<"\t\t Tanggal Check Out [DDMMMYY] : "; cin>>checkout;
+    cout<<"\t\t ====================================================== "<<endl;
+    
+    cout<<"\t\t Data Pemesanan Kamar" <<endl;
+    cout<<"\t\t ====================================================== "<<endl;
+    cout<<"\t\t Nama Repsesionis    : "<<resepsionis<<endl;
+    cout<<"\t\t ID Resepsionis      : "<<id_resepsionis<<endl;
+    cout<<"\t\t Name Guest          : "<<guest<<endl;
+    cout<<"\t\t ID Guest            : "<<id_guest<<endl;
+    cout<<"\t\t Alamat              : "<<alamat<<endl;
+    cout<<"\t\t No. Telp/hp         : "<<hp<<endl;
+    cout<<"\t\t Tipe Kamar          : "<<fixkam<<endl;
+    cout<<"\t\t No. Kamar           : ";
+    
+    if (no_kamar >= 1 && no_kamar <= 100)
+    {
+        cout<<no_kamar;
+    }
+    else
+    {
+        cout<<endl;
+        cout<<"\t\t     Maaf Nomor Kamar Belum Tersedia"<<endl;
+        cout<<"\t\t     Silahkan Hubungi Resepsionis Untuk Pergantian Nomor"<<endl;
+    }
+    cout<<endl;
+    cout<<"\t\t Lama Menginap       :" <<lama <<"Hari" <<endl;
+    cout<<"\t\t Tanggal Check In    :" <<checkin << endl;
+    cout<<"\t\t Tanggal Check Out   :" <<checkout << endl;
+    cout<<"\t\t Harga Perhari       : Rp. " <<harga_kamar <<endl;
+    cout<<"\t\t Harga Kamar Total   : Rp. " <<lama*harga_kamar <<endl;
+    cout<<"\t\t Diskon              : Rp. " <<diskon*harga_kamar <<endl;
+    total = harga_kamar*lama - (diskon*harga_kamar);
+    cout<<"\t\t ====================================================== "<<endl;
+    cout<<"\t\t Biaya total         : Rp. "<<total <<endl;
+    cout<<"\t\t Uang Muka           : Rp. "; cin>>um;
+    kurang = total-um;
+    
+    if(total>=um)
+    {
+        cout<<"\t\t Kekurangan      : Rp. "<<kurang<<endl;
+    }
+    else
+    {
+        cout<<"\t\t Kembali         : Rp. "<<kurang*(-1)<<endl;
+    }
+    cout<<"\t\t ====================================================== "<<endl;
+    
+    cout<<"\t\t Terima Kasih Telah Memilih Hotel Takt Distiny"<<endl;
+    cout<<"\t\t     Sebagai Tempat Peristirahatan Anda"<<endl;
+    cout<<"\t\t Apakah Anda Ingin Memesan Kamar Lagi ? [Y/N]"; cin>>jwb;
+        while (jwb=="Y"  ||  jwb=="y") {
+            goto awal;
+        }
+    cout<<"\n\t\t ==================Arigatougozaimasu===================";
+    
+return 0;
+    
+    
+}
